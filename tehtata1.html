@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	    <title>Positioning Items</title>
+	    <meta charset="UTF-8">
+
+	    <style>  
+         
+        /*////////////////////
+        // Positioning items    
+        //////////////////////
+        
+        Reset *
+        Display: inline vs block
+        https://www.w3schools.com/cssref/pr_class_display.asp
+    
+        Box-sizing
+        https://www.w3schools.com/css/css3_box-sizing.asp
+        
+        Using percentages and max-width
+        https://www.w3schools.com/cssref/css_units.asp
+    
+        Float and clear
+        https://www.w3schools.com/cssref/pr_class_float.asp
+        
+        Flexbox - https://www.w3schools.com/css/css3_flexbox.asp
+        
+        Absolute/Relative positioning
+        https://www.w3schools.com/cssref/pr_class_position.asp
+          
+        Centering
+        https://www.w3schools.com/css/css_align.asp
+        
+        */
+        
+        * { box-sizing: border-box;
+        }
+        
+        body {
+        }
+    
+        .box {
+            height: 100px;
+            width: 100%;
+            border: 1px solid black;
+            color: rgb(2, 5, 8);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 40px;
+            margin: auto;
+            }
+        
+        #red { background-color: rgba(50, 204, 109, 0.767);}
+
+        
+      
+      
+        .clear { 
+            clear: both;
+        }
+    
+        /* img */
+        img {
+        }
+        
+        /* container */
+        .container {           
+        }
+        
+        /* relative and absolute positioning with blue */      
+        #blue {
+        }
+
+        #important {
+            color: black;
+        }
+
+
+        .info {
+            color: rgb(152, 208, 61);
+        }
+
+        p {
+            color: rgba(102, 220, 23, 0.769);
+        }
+
+    
+        main{
+            background-color: rgba(137, 43, 226, 0.178);
+            margin: 20px;
+            padding: 10px;
+            width: 90%;
+            max-width: 700px;
+            margin:auto;
+        }
+
+        .tark {
+            color: blue;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+
+        #float{
+            clear: both;
+            background-color: grey;
+        }
+
+
+        nav::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .pizz{
+            size: 10px;
+            float: left;
+            margin-right: 30px;
+            margin-bottom: 30px;
+            width: 250px;
+            height: 200px;
+        }
+        </style>
+    </head>
+
+<body>
+
+    <nav>
+    <div class="box" id="red">
+       <p1 class="logo">Pizza 24</p1>
+       <p2 class="etu">Etusivu</p2>
+       <p3 class="inf">Info</p3>
+    </div>  
+    </nav>
+
+    <!-- Float continues, clearing -->
+
+    <h2 class="clear">
+        otsikko
+    </h2>
+
+
+    <style> 
+        main{
+            position: relative;
+        }
+
+        #mini1 {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: -30px;
+            right: -50px;
+         }
+
+        #mini2 {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(160, 79, 160);
+            position: fixed;
+         }
+
+
+    </style>
+
+    
+    <main>
+
+        
+        <div id="mini1">
+            <img src="basilika.jfif" style="width: 100%;">
+        </div>
+
+        <div id="mini2">mainos</div>
+
+    <h1>Heading</h1>
+    <h2>Toisen tason otsikko</h2>
+    
+    <img src="pizza.jfif" class="pizz">
+
+    
+    <!-- Responsive images and centering -->  
+     <p class="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error voluptate <span class="tark">eos asperiores quod totam</span>, officia molestias dolores! Perspiciatis nobis laudantium minus ex rem autem non consequuntur iure, dolor maxime earum!</p>
+     
+     <p class="info" id="important">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim consequuntur, nisi illum ducimus iste natus. Rem maiores eius eveniet non ab at vel, neque unde illo. Nostrum provident obcaecati ex.</p>
+
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quod blanditiis recusandae reiciendis eos accusantium illum? Asperiores voluptas dignissimos eius sed saepe aut quas, neque officiis sequi animi autem facere!</p>
+    
+
+    
+    </main>
+    </div>
+</body>
+</html>
