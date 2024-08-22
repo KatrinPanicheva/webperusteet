@@ -109,6 +109,11 @@ main{
     width: 100px;
     height: 100px;
     position: absolute;
-    top: -1px;
-    right: -1px;
+    top: -25px;
+    right: -25px;
  }
+
+img.logo{
+    position: absolute;
+   
+}
