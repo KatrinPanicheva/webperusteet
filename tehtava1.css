@@ -1,47 +1,47 @@
 * { box-sizing: border-box;
 }
 
+:root{ 
+    --caf-noir: #5A452Cff;
+    --eerie-black: #1E1C11ff;
+    --gunmetal: #16282Bff;
+    --rich-black: #0D1A1Aff;
+    --black: #000500ff;
+    --paynes-gray: #616E79ff;
+    --blue-munsell: #1C899Fff;
+    --bistre: #342919ff;
+    --beaver: #B2917Cff;
+    --ash-gray: #ADBCBFff;
+}
+
 body {
     background-color: rgba(250, 235, 215, 0.281);
 }
 
 .box {
-    height: 100px;
-    width: 100%;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 40px;
+    box-shadow: 10px 10px 5px var(--bistre);
     }
 
-#red { background-color: rgb(0, 0, 0);}
-
+#red { background-color: var(--caf-noir);}
 
 .clear { 
     clear: both;
 }
 
-/* img */
-img {
-}
-
-/* container */
-.container {           
-}
-
-
-p4 {
-    color: rgba(245, 242, 242, 0.769);
-    padding-top: 30px;
-}
 
 main{
-    background-color: rgba(108, 43, 43, 0.584);
-    margin: 90px;
-    padding: 50px;
+    background-color: rgba(155, 121, 76, 0.445);
+    margin: auto;
+    padding: 70px;
     width: 90%;
     max-width: 900px;
-    margin-left: 70px;
+    background-image: url(kuvat/kuppi.png);
+    position: relative;
+    margin-bottom: 100px;
+    /*background-attachment: fixed;*/
 }
-
 
 nav::after {
     content: "";
@@ -49,11 +49,24 @@ nav::after {
     display: table;
 }
 
+.meista {
+    height: 41px;
+    margin-bottom: 3px;
+    margin-top: -18px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.teksti {
+    font-size: larger;
+    text-shadow: 2px 2px 4px #ffffff;
+}
+
+
 .barista{
     size: 9px;
     float: left;
-    margin-right: 10px;
-    padding-bottom: 80px;
+    margin-right: 29px;
+    padding-bottom: 70px;
     width: 200px;
     height: 190px;
 }
@@ -65,14 +78,14 @@ h2 {
 
 
 footer {
-    color: aliceblue;
+    color: rgb(255, 255, 255);
     font-style: oblique;
     padding-bottom: 15px;
     padding-top: 15px;
-   text-align: center;
-   background-color: rgb(12, 11, 12);
-   margin: auto;
-   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    background-color: var(--caf-noir);
+    margin: auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 ul {
@@ -98,15 +111,12 @@ li a {
 }
 
 li a:hover {
-    background-color: #9f9a9b58;
+    background-color: #9f9a9b;
 }
 
-main{
-    position: relative;
-}
 
 #mini1 {
-    width: 100px;
+    width: 260px;
     height: 100px;
     position: absolute;
     top: -25px;
@@ -115,5 +125,44 @@ main{
 
 img.logo{
     position: absolute;
-   
+}
+
+
+
+
+/*.joulu{
+    /* Poistaa kokonaan */
+    /* display: none */
+    /*visibility: hidden*/
+   /* height: 200px;
+    width: 300px;
+    display: block; 
+    margin: auto;
+    object-fit: none;
+    background-color: blue;
+}
+
+
+.taustakuva {
+    width: 400px;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.749);
+    margin: 40px auto 40px;
+    background-image: url(kuvat/kuppi.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    /* pitää uvan paikalla background-attachment: fixed; */
+}
+/*
+.overflow{
+    background-color: aqua;
+    width: 300px;
+    height: 100px;
+    overflow: scroll;
+    margin: auto;
+}
+
+h3{
+    margin: 50px;
 }
