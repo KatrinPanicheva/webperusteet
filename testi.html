@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <form action="" method="get">
+            <fieldset>
+                <legend>Rekisteröidy</legend>
+
+                <label for="nimi">Anna etunimi</label>
+                <input type="text" name="nimi" id="" />
+
+                <label for="nimi">Anna Sähköposti</label>
+                <input type="email" name="sposti" id="">
+
+                <label for="nimi">Anna salasana</label>
+                <input type="password" name="ssana" id="">
+
+
+                <input type="submit" value="Submit"
+
+            </fieldset>
+        </form>
+        <p> Tänne tulokset</p>
+
+        <script>
+            const form = document.querySelector('form');
+            const nimi = document.querySelector('input [name=nimi]');
+            const ssana = document.querySelector('input[name=salasana]');
+
+
+            form.addEventListener('submit', function (evt){
+                p.innetText ='Your name is ${nimi.value} ja sasalanasi ${ssana.value}'
+            })
+        </script>
+</body>
+</html>

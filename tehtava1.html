@@ -4,8 +4,33 @@
 	    <title>Positioning Items</title>
 	    <meta charset="UTF-8">
         <link rel="stylesheet" href="tehtava1.css">
-    </head>
+        <script src="https://kit.fontawesome.com/4df7482f76.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
 
+
+        <style>
+          label{
+            display: block;
+            color: rgb(226, 76, 43);
+            margin: 10px auto;
+          }
+
+          input:focus{
+            outline: none;
+          }
+
+          form input:valid{
+            border-left-color: rgb(26, 215, 26);
+          }
+
+          form input:invalid{
+            color: rgb(47, 0, 255);
+          }
+
+        </style>
+     </head>
 <body>
 
     <nav>
@@ -14,12 +39,61 @@
                 <li style="float:left"><a class="logo" href="#etusivu">Coffee House</a>
                 <li class="etu"><a href="#info">Info</a></li>
                 <li class="inf"><a href="#tuotteet">Tuotteet</a></li>
+                <dialog class="syotto">
+                  <form>
+                      
+                      <p class="reki">Rekisteröidy</p>
+
+                      <p>
+                          <label for="etunimi">Etunimi (minimi 3 kirjainta):</label>
+                          <input type="etunimi" 
+                          id="etunimi" 
+                          name="etunimi" 
+                          placeholder="Katrin"
+                          minlength="3">
+                      </p>
+                      <p>
+                          <label for="sukunimi">Sukunimi (minimi 3 kirjainta):</label>
+                          <input type="sukunimi" 
+                          id="sukunimi" 
+                          name="sukunimi" 
+                          placeholder="Smith"
+                          minlength="3">
+                      </p>
+                      <p>
+                          <label for="email">Sähköposti (@metropolia.fi):</label>
+                          <input type="email" 
+                          id="email" 
+                          name="email" 
+                          placeholder="@metropolia.fi">
+                      </p>
+                      <p>
+                          <label for="salasana">Salasana (Vähintään 8 merkkiä):</label>
+                          <input type="password" 
+                          id="salasana" 
+                          name="salasana" 
+                          pattern="^(?=.*[A-Z])(?=.*\d.*\d)[A-Za-z\d]{8,}$"
+                          required>
+                      </p>
+
+                      </p>
+                        <button class="laheta">Lähetä</button>
+                        <button class="kiinni">Sulje</button>
+                      </p>
+
+                   <!--   <p>
+                        <label for="nimi">Anna päivämäärä</label>
+                        <input type="date" name="paivamaara" id="">
+                        <input type="submit" value="Submit">
+                      </p>--> 
+                   </form>
+                </dialog>
+            <button class="kirja">Kirjaudu</button>
+        
         </ul>
     </div>  
-    </nav>
-    <h2 class="clear">
-        Otsikko
-    </h2>
+    </nav>    
+    <h2 class="clear"></h2>
 
     <main>
         <div id="mini1">
@@ -28,12 +102,14 @@
             alt="papu"
             srcset="papuja.png">
         </div>
+    </h2>
 
-    <h1 class="meista">Meistä</h1>
+        
+      <h1 class="meista">Meistä</h1>
 
-    <img src="barista.jpeg" class="barista" alt="barista">
+      <img src="kahvila.jpg" class="kahvila" alt="kahvila">
     
-     <p class="teksti">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error voluptate eos asperiores quod totam, officia molestias dolores! Perspiciatis nobis laudantium minus ex rem autem non consequuntur iure, dolor maxime earum!</p>
+      <p class="teksti">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error voluptate eos asperiores quod totam, officia molestias dolores! Perspiciatis nobis laudantium minus ex rem autem non consequuntur iure, dolor maxime earum!</p>
     </main>
 
 
@@ -54,5 +130,21 @@
             Metropolia 2024
         </p>
     </footer>
+    <script>
+    
+        const dialog = document.querySelector('dialog');
+        const showButton = document.querySelector('dialog + button');
+        const closeButton = document.querySelector('.kiinni');
+        
+        // "Show the dialog" button opens the dialog modally
+        showButton.addEventListener("click", () => {
+          dialog.showModal();
+        });
+        
+        // "Close" button closes the dialog
+        closeButton.addEventListener("click", () => {
+          dialog.close();
+        });
+        </script>
 </body>
 </html>

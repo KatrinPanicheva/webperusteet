@@ -1,4 +1,6 @@
 * { box-sizing: border-box;
+    margin-left: 12px;
+    margin-right: 12px;
 }
 
 :root{ 
@@ -37,17 +39,17 @@ main{
     padding: 70px;
     width: 90%;
     max-width: 900px;
-    background-image: url(kuvat/kuppi.png);
+    background-image: url(//kuvat/kuppi2.jpg//);
     position: relative;
     margin-bottom: 100px;
     /*background-attachment: fixed;*/
 }
 
-nav::after {
+/*nav::after {
     content: "";
     clear: both;
     display: table;
-}
+}*/
 
 .meista {
     height: 41px;
@@ -62,13 +64,13 @@ nav::after {
 }
 
 
-.barista{
-    size: 9px;
+.kahvila{
+    size: 24px;
     float: left;
-    margin-right: 29px;
-    padding-bottom: 70px;
-    width: 200px;
-    height: 190px;
+    margin-right: 44px;
+    padding-bottom: 90px;
+    width: 332px;
+    height: 299px;
 }
 
 h2 {
@@ -94,6 +96,7 @@ ul {
     padding: 0;
     text-align: center;
     overflow: hidden;
+    height: 120px;
 }
 
 li {
@@ -105,13 +108,16 @@ li a {
     display: block;
     color: rgb(255, 253, 253);
     text-align: center;
-    padding: 24px 26px;
+    padding: 33px 16px;
     text-decoration: none;
     padding-bottom: 30px;
+    font-family: "Nerko One", cursive;
+    font-weight: 300;
+    font-style: normal;
 }
 
 li a:hover {
-    background-color: #9f9a9b;
+    color: #1E1C11ff;
 }
 
 
@@ -123,12 +129,87 @@ li a:hover {
     right: -25px;
  }
 
+
+.logo{
+    padding-top: 33px;
+    padding-left: 25px;
+}
+
 img.logo{
     position: absolute;
 }
 
+dialog{
+    background-color: rgb(223, 218, 211);
+    margin: auto;
+    height: 490px;
+    width: 335px;
+    background-image: url(kuvat/coffee-gif-1.gif);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
 
 
+.fa-solid{
+    color: pink;
+    padding-top: 25px;
+    padding-right: 400px;
+    text-align: left;
+    margin-right: 40px;
+}
+
+.kirja{
+    margin-top: 47px;
+    margin-left: 380px;
+    background-color: #f9f1f3;
+    font-family: "Nerko One", cursive;
+    font-style: normal;
+}
+
+.kirja:hover{
+    background-color: rgba(108, 111, 111, 0.868);
+}
+
+.syotto {
+    text-align: left;
+    font-size: small;
+    margin: auto;
+}
+
+.kiinni {
+    margin: 0px;
+}
+
+
+
+p{
+    margin-right: 19px;
+}
+
+.reki{
+    font-family: "Nerko One", cursive;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 47px;
+    margin-left: 22px;
+    margin-top: 80px;
+    color: white;
+    text-shadow: 3px 2px 2px black;
+}
+
+
+.laheta{
+    margin-left: 24px;
+}
+
+
+form::backdrop{
+    backdrop-filter: var(--blue-munsell);
+}
+
+.input{
+
+}
 
 /*.joulu{
     /* Poistaa kokonaan */
