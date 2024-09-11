@@ -1,6 +1,5 @@
 * { box-sizing: border-box;
-    margin-left: 12px;
-    margin-right: 12px;
+    
 }
 
 :root{ 
@@ -17,7 +16,8 @@
 }
 
 body {
-    background-color: rgba(250, 235, 215, 0.281);
+    background-color: rgba(250, 235, 215, 0.749);
+    background-image: url(kuvat/neste2.png);
 }
 
 .box {
@@ -34,15 +34,23 @@ body {
 
 
 main{
-    background-color: rgba(155, 121, 76, 0.445);
+    background-color: rgba(155, 121, 76, 0.849);
     margin: auto;
     padding: 70px;
     width: 90%;
     max-width: 900px;
-    background-image: url(//kuvat/kuppi2.jpg//);
     position: relative;
     margin-bottom: 100px;
     /*background-attachment: fixed;*/
+}
+
+
+@media screen and (max-width: 600px){
+    main{
+        max-height: none;
+        min-width: 300px;
+    }
+    
 }
 
 /*nav::after {
@@ -60,18 +68,25 @@ main{
 
 .teksti {
     font-size: larger;
-    text-shadow: 2px 2px 4px #ffffff;
 }
 
 
-.kahvila{
+.iced{
     size: 24px;
     float: left;
     margin-right: 44px;
     padding-bottom: 90px;
-    width: 332px;
-    height: 299px;
+    width: 100px;
+    height: auto;
 }
+
+@media screen and (max-width: 100px) {
+    main .iced{
+        max-height: none;
+        min-width: 300px;
+    }
+}
+
 
 h2 {
     padding-left: 50px;
@@ -97,6 +112,7 @@ ul {
     text-align: center;
     overflow: hidden;
     height: 120px;
+    display: list-item;
 }
 
 li {
@@ -108,7 +124,7 @@ li a {
     display: block;
     color: rgb(255, 253, 253);
     text-align: center;
-    padding: 33px 16px;
+    padding: 33px 25px;
     text-decoration: none;
     padding-bottom: 30px;
     font-family: "Nerko One", cursive;
@@ -121,13 +137,15 @@ li a:hover {
 }
 
 
-#mini1 {
+.mini1 {
     width: 260px;
     height: 100px;
     position: absolute;
     top: -25px;
-    right: -25px;
+    right: -5px;
  }
+
+
 
 
 .logo{
@@ -159,12 +177,23 @@ dialog{
 }
 
 .kirja{
-    margin-top: 47px;
-    margin-left: 380px;
+    display: flex;
     background-color: #f9f1f3;
     font-family: "Nerko One", cursive;
     font-style: normal;
-}
+    border-radius: 20px;
+    margin-top: 49px;
+} 
+
+
+
+/*.kirja{
+    margin-top: 9vh;
+    margin-left: 31vh;
+
+} */
+
+
 
 .kirja:hover{
     background-color: rgba(108, 111, 111, 0.868);
@@ -178,6 +207,7 @@ dialog{
 
 .kiinni {
     margin: 0px;
+    font-family: fangsong;
 }
 
 
@@ -200,16 +230,132 @@ p{
 
 .laheta{
     margin-left: 24px;
+    font-family: fangsong;
 }
 
 
 form::backdrop{
-    backdrop-filter: var(--blue-munsell);
+    backdrop-filter: var(--bistre);
 }
 
-.input{
 
+@media screen and (min-width: 600px) {
+    .kirja{
+        max-width: 1000px;
+    }
 }
+
+@media screen and (max-width: 2000px) {
+    .sidebar {
+        width: 350px; /* Sivupalkki tulee näkyviin */
+    }
+
+/* The sidebar menu */
+.sidebar {
+    height: 44%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0px;
+    background-color: rgb(119 100 76 / 82%);
+    overflow-x: hidden;
+    padding-top: 42px;
+    transition: 0.5s;
+  }
+
+  
+  /* The sidebar links */
+  .sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+  /* When you mouse over the navigation links, change their color */
+  .sidebar a:hover {
+    background-color: rgba(127, 99, 62, 0.845);
+}
+  
+  /* Position and style the close button (top right corner) */
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    color: rgb(5, 5, 5);
+  }
+  
+  /* The button used to open the sidebar */
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: rgb(59, 47, 30);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    display: none; /* Piilotetaan isolla näytöllä */
+}
+  .openbtn:hover {
+    background-color: #000000a9;
+  }
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  #main {
+    transition: margin-left .5s; /* If you want a transition effect */
+    padding: 20px;
+    padding: 0;
+  }
+  
+  @media screen and (max-width: 700px) {
+    nav {
+        display: none; /* Piilotetaan nav pienillä näytöillä */
+    }
+
+    .openbtn {
+        display: block; /* Näytetään "Avaa Sidebar" -nappi pienillä näytöillä */
+    }
+}
+
+/* Piilota sivupalkki isolla näytöllä */
+
+@media screen and (min-width: 800px) {
+    .sidebar {
+        display: none; /* Piilotetaan sidebar isolla näytöillä */
+    }
+
+    .openbtn {
+        display: none; /* Piilotetaan myös avausnappi isolla näytöillä */
+    }
+}
+
+
+.kirjaudu{
+    display: flex;
+    background-color: #f9f1f3;
+    font-family: "Nerko One", cursive;
+    font-style: normal;
+    border-radius: 20px;
+    margin-top: 6px;
+    margin-left: 92px;
+}
+
+
+a{
+display: block;
+color: rgb(255, 253, 253);
+text-align: center;
+padding: 33px 25px;
+text-decoration: none;
+padding-bottom: 30px;
+font-family: "Nerko One", cursive;
+font-weight: 300;
+font-style: normal;
+}
+
+
 
 /*.joulu{
     /* Poistaa kokonaan */
