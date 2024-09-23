@@ -185,7 +185,13 @@ dialog{
     margin-top: 49px;
 } 
 
+.vali{
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+    width: -webkit-fill-available;
 
+}
 
 /*.kirja{
     margin-top: 9vh;
@@ -305,8 +311,7 @@ form::backdrop{
   /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
   #main {
     transition: margin-left .5s; /* If you want a transition effect */
-    padding: 20px;
-    padding: 0;
+
   }
   
   @media screen and (max-width: 700px) {
@@ -316,6 +321,7 @@ form::backdrop{
 
     .openbtn {
         display: block; /* Näytetään "Avaa Sidebar" -nappi pienillä näytöillä */
+        width: -webkit-fill-available;
     }
 }
 
