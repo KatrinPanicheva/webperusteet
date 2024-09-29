@@ -28,6 +28,8 @@
         grid-template-rows: 200px 100px;
         justify-content: center;
         align-content: center;
+        grid-template-columns: repeat(auto-fill, 150px);
+        gap: 4px;
     }
 
     .item{
@@ -40,16 +42,131 @@
         text-align: center;
     }
 
+    .layout{
+        border: 1px solid blue;
+        display: grid;
+        border-radius: 3px;
+        grid-template-columns: [vasen] 1fr 1fr 1fr [oikea];
+        grid-template-rows: 100px 100px;
+    }
+
+
+    .solu{
+    border: 4px solid rgb(84, 48, 226);
+    border-radius: 3px;
+    font-size: 30px;
+    padding: 5px;
+    background-color: pink;
+    text-align: center;
+}
+
+    .solu1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        background-color: blue;
+}
+
+    .solu6{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        background-color: rgb(49, 143, 115);
+    }
+
+
+    .solu2{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        background-color: rgb(194, 62, 82);
+        
+    }
+
+        .solu3{
+        /*grid-column-start: vasen;*/
+        /*grid-column-end: oikea;*/
+        grid-column: 1/-1;
+        background-color: yellow;
+        }
+
+        .layout-names{
+            display: grid;
+            height: 80vh;
+            grid-template-columns: 200px 1fr 150px;
+            grid-template-rows: 200px 1fr 200px;
+            grid-template-areas: 
+                'header header header'
+                'navi main mainos'
+                'footer footer footer';
+        }
+
+        header{
+            grid-area: header;
+        }
+
+        nav{
+            grid-area: navi;
+        }
+
+        main{
+            grid-area: main;
+        }
+
+        aside{
+            grid-area: mainos;
+        }
+
+        footer{
+            grid-area: footer;
+        }
+
+            @media screen and (max-width: 650px){
+               /* .layout-names{
+                    'header header header'
+                    'nav main main'
+                    'footer footer footer'
+                }
+                aside{
+                    display: none;
+                }*/
+            }
+
 </style>
 <body>
+
+    <h3> Area</h3>
+    <div class="layout-names">
+        <header class="solu ">header</header>
+        <nav class="solu ">navi</nav>
+        <main class="solu ">main</main>
+        <aside class="solu ">mainos</aside>
+        <footer class="solu ">footer</footer>
+    </div>
+    
+
+
+
+    <h3>Grid template areas.</h3>
+    <div class="layout">
+        <div class="solu solu1">1</div>
+        <div class="solu solu2">2</div>
+        <div class="solu solu3">3</div>
+        <div class="solu solu4">4</div>
+        <div class="solu solu5">5</div>
+        <div class="solu solu6">6</div>
+        <div class="solu solu7">7</div>
+    </div>
+
+
     <h3>grid harjoitus</h3>
     <div class="container">
         <div class="item item1">1</div>
         <div class="item item2">2</div>
         <div class="item item3">3</div>
-        <div class="item item4">4</div>
-        <div class="item item5">5</div>
-        <div class="item item6">6</div>
     </div>
 </body>
 </html>
